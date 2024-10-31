@@ -1,0 +1,16 @@
+{
+	"manifest_version": 3,
+	"name": "LinkedIn Junk Cleaner",
+	"version": "1.0",
+	"description": "An extension to delete posts with a specific header from LinkedIn feed.",
+	"permissions": ["scripting", "activeTab"],
+	"content_scripts": [
+		{
+			"matches": ["*://*.linkedin.com/feed/*"],
+			"js": ["content.js"]
+		}
+	],
+	"action": {
+		"default_popup": "popup.html"
+	}
+}
